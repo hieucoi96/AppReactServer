@@ -22,6 +22,8 @@ export default function InputForm({route, navigation}) {
                 fullname,
                 phone_number,
             })
+        }).then(data=>{
+            navigation.navigate("Profile")
         })
             // .then(res=> res.json())
     }
