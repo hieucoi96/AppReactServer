@@ -38,7 +38,7 @@ export default function Profile({route, navigation}) {
 
     return (
         <View style={styles.container}>
-            <FlatList style={{flex: 1, width: "100%", marginTop: 30}}
+            <FlatList style={{flex: 1, width: "100%", marginTop: 100}}
                 data={data}
                 extraData={data}
                 keyExtractor={(item, index) => index.toString()}
