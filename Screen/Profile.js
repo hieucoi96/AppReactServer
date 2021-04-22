@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, Image } from 'react-native';
 import { useIsFocused } from "@react-navigation/native";
 
 export default function Profile({route, navigation}) {
@@ -50,6 +50,10 @@ export default function Profile({route, navigation}) {
                         <View style={styles.item}>
 
                           <View style={styles.itemContainer}>
+                              <Image
+                                  source={ {uri: 'https://hieuhmph12287-lab-6-7.herokuapp.com/'+item.avatar} }
+                                  style={{ width: '100%', height: 120, justifyContent: 'center', marginBottom: 15, alignSelf: 'center', borderTopLeftRadius: 5, borderTopRightRadius: 5 }}
+                              />
                               <Text style={styles.itemText}>ID: {item._id}</Text>
                               <Text style={styles.itemText}>Username: {item.username}</Text>
                               <Text style={styles.itemText}>Password: {item.password}</Text>
@@ -95,7 +99,7 @@ const styles = StyleSheet.create({
       borderRadius: 5,
     },
     itemContainer: {
-      paddingVertical: 10,
+      paddingBottom: 10,
     },
     itemText: {
       color: '#000000',
